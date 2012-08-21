@@ -1,0 +1,18 @@
+<taglib 
+   xsi:schemaLocation=    "http://java.sun.com/xml/ns/javaee web-jsptaglibrary_2_1.xsd"
+     xmlns="http://java.sun.com/xml/ns/javaee"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     version="2.1" >
+    <tlib-version>1.0</tlib-version>
+    <short-name>dbp</short-name>
+    <uri>http://dbp.com/basico/dbp</uri>
+	<tag-file>
+		<name>campoBasico</name>
+		<path>/META-INF/tags/campoBasico.tag</path>
+	</tag-file>
+		<tag-file>
+		<name>grupoBasico</name>
+		<path>/META-INF/tags/grupoBasico.tag</path>
+	</tag-file>
+	
+</taglib>
