@@ -2,13 +2,14 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ attribute name="id" required="true"%>
 <%@ attribute name="type" required="true"%>
-<%@ attribute name="label" required="true"%>
+<%@ attribute name="label" required="true" rtexprvalue="true" %>
 <%@ attribute name="title"%>
 <%@ attribute name="titleLabel"%>
 <%@ attribute name="requiered"%>
 <%@ attribute name="value"%>
 <%@ attribute name="classLabel"%>
 <%@ attribute name="classInput"%>
+<%@ attribute name="readonly"%>
 <%-- La clase del label --%>
 <c:choose>
 	<c:when test="${classLabel !='' }">
@@ -45,6 +46,15 @@
 		${label}${textoLabelRequerido}: </label>
 </div>
 <div class="_25L">
-	<input ${classInput} ${validaciones} id="${id}" type="${type}" name="${id}" title="${title}"
+	<c:choose>
+		<c:when test="${readonly =='true'}">
+			${value}
+		</c:when>
+		<c:otherwise>
+		<input ${classInput} ${validaciones} id="${id}" type="${type}" name="${id}" title="${title}"
 		value="${value}" />
+		</c:otherwise>
+	</c:choose>
+	
+		
 </div>
