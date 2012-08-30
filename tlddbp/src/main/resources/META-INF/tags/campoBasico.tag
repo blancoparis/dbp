@@ -42,7 +42,7 @@
 
 
 <div class="_25">
-	<label for="${id}" title="${titleLabel}" ${claseEtiqueta} >
+	<label id="etiqueta_${id}" for="${id}" title="${titleLabel}" ${claseEtiqueta} >
 		${label}${textoLabelRequerido}: </label>
 </div>
 <div class="_25L">
