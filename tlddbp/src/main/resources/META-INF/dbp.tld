@@ -6,13 +6,27 @@
     <tlib-version>1.0</tlib-version>
     <short-name>dbp</short-name>
     <uri>http://dbp.com/basico/dbp</uri>
+    <function>
+        <name>getJson</name> <!-- Will be used to call your El Function:   ${myTagLibrary:randomColor()} inside your JSP page -->
+        <function-class>org.dbp.tlddbp.JacksonUtils</function-class>
+        <function-signature>String getJson(java.lang.Object)</function-signature>
+    </function>
+    
 	<tag-file>
 		<name>campoBasico</name>
 		<path>/META-INF/tags/campoBasico.tag</path>
 	</tag-file>
-		<tag-file>
+	<tag-file>
 		<name>grupoBasico</name>
 		<path>/META-INF/tags/grupoBasico.tag</path>
 	</tag-file>
-	
+	<tag-file>
+		<name>grupoBasico</name>
+		<path>/META-INF/tags/grupoBasico.tag</path>
+	</tag-file>
+	<tag-file>
+		<name>procesarJson</name>
+		<path>/META-INF/tags/procesarJson.tag</path>
+	</tag-file>
+
 </taglib>

@@ -53,6 +53,7 @@
 		<c:otherwise>
 		<input ${classInput} ${validaciones} id="${id}" type="${type}" name="${id}" title="${title}"
 		value="${value}" />
+		<div id="eror_vista_${id}"></div>
 		</c:otherwise>
 	</c:choose>
 	
