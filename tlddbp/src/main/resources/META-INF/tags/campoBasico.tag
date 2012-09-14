@@ -10,6 +10,16 @@
 <%@ attribute name="classLabel"%>
 <%@ attribute name="classInput"%>
 <%@ attribute name="readonly"%>
+<%@ attribute name="autofocus" %>
+<%-- Autofocus de html --%>
+<c:choose>
+	<c:when test="${autofocus !=''}">
+		<c:set var="varAutofocus" value="autofocus='${autofocus}'" />
+	</c:when>
+	<c:otherwise>
+		<c:set var="varAutofocus" value="" />
+	</c:otherwise>
+</c:choose>
 <%-- La clase del label --%>
 <c:choose>
 	<c:when test="${classLabel !='' }">
@@ -51,7 +61,7 @@
 			${value}
 		</c:when>
 		<c:otherwise>
-		<input ${classInput} ${validaciones} id="${id}" type="${type}" name="${id}" title="${title}"
+		<input ${varAutofocus} ${classInput} ${validaciones} id="${id}" type="${type}" name="${id}" title="${title}"
 		value="${value}" />
 		<div id="eror_vista_${id}"></div>
 		</c:otherwise>
